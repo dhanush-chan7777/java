@@ -1,26 +1,26 @@
 public class DhanushPattern {
     public static void main(String[] args) {
-        int height = 7; // Height of the letters
-        int width = 7;  // Width of each letter (may vary per character)
-        char[][] canvas = new char[height][50]; // Adjust width as needed
+        int height = 7; 
+        int width = 7; 
+        char[][] canvas = new char[height][50]; 
 
-        // Initialize canvas with spaces
+   
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < canvas[i].length; j++) {
                 canvas[i][j] = ' ';
             }
         }
 
-        // Draw each letter by modifying the canvas array
+        
         drawD(canvas, 0);
-        drawHLetter(canvas, 8);  // Renamed to avoid duplicate method name
+        drawHLetter(canvas, 8);  
         drawA(canvas, 16);
         drawN(canvas, 24);
         drawU(canvas, 32);
         drawS(canvas, 40);
-        drawHLetter(canvas, 48); // Using renamed method for the second H
+        drawHLetter(canvas, 48); 
 
-        // Print the canvas
+       
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < canvas[i].length; j++) {
                 System.out.print(canvas[i][j]);
@@ -29,7 +29,7 @@ public class DhanushPattern {
         }
     }
 
-    // Function to draw 'D'
+    
     static void drawD(char[][] canvas, int offset) {
         for (int i = 0; i < 7; i++) {
             canvas[i][offset] = '*';
@@ -41,8 +41,8 @@ public class DhanushPattern {
         }
     }
 
-    // Function to draw 'H'
-    static void drawHLetter(char[][] canvas, int offset) { // Renamed method
+    
+    static void drawHLetter(char[][] canvas, int offset) { 
         for (int i = 0; i < 7; i++) {
             canvas[i][offset] = '*';
             canvas[i][offset + 4] = '*';
@@ -54,7 +54,7 @@ public class DhanushPattern {
         }
     }
 
-    // Function to draw 'A'
+    
     static void drawA(char[][] canvas, int offset) {
         for (int i = 0; i < 7; i++) {
             canvas[i][offset] = '*';
@@ -67,7 +67,7 @@ public class DhanushPattern {
         }
     }
 
-    // Function to draw 'N'
+    
     static void drawN(char[][] canvas, int offset) {
         for (int i = 0; i < 7; i++) {
             canvas[i][offset] = '*';
@@ -76,7 +76,7 @@ public class DhanushPattern {
         }
     }
 
-    // Function to draw 'U'
+    
     static void drawU(char[][] canvas, int offset) {
         for (int i = 0; i < 6; i++) {
             canvas[i][offset] = '*';
@@ -87,7 +87,7 @@ public class DhanushPattern {
         canvas[6][offset + 3] = '*';
     }
 
-    // Function to draw 'S'
+   
     static void drawS(char[][] canvas, int offset) {
         for (int j = 0; j < 5; j++) {
             canvas[0][offset + j] = '*';
