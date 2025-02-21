@@ -18,7 +18,7 @@ class Child extends Parentclass{
 public class Singleinheritance{
     public static void main(String []args){
         Child obj=new Child();
-        obj.get_a();;
+        obj.get_a();
         obj.get_b();
         obj.sum();
         
