@@ -1,0 +1,28 @@
+public class FrequencyString{
+    public static void main(String []args){
+        String str="abc erf abc jjd abc";
+        String arr[]=str.split("\\s+");
+        
+    for(int i=0;i<arr.length;i++){
+        boolean alreadycounted=false;
+        int count=0;
+        for(int k=0;k<i;k++){
+            if(arr[i].equals(arr[k])){
+            alreadycounted=true;
+            break;
+        }
+        }
+        
+    if(!alreadycounted){
+        for(int j=0;j<arr.length;j++){
+            if(arr[i].equals(arr[j])){
+                count++;
+            }
+        }
+    
+        System.out.println(arr[i]+":"+count);
+    }
+    }
+    
+}
+}
